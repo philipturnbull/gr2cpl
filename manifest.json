@@ -1,0 +1,15 @@
+{
+  "name": "Goodreads -> CPL",
+  "description": "",
+  "version": "2.0",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "manifest_version": 2
+}
