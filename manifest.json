@@ -1,15 +1,30 @@
 {
-  "name": "Goodreads -> CPL",
+  "name": "Goodreads to CPL",
   "description": "",
   "version": "2.0",
-  "permissions": [
-    "tabs"
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.goodreads.com/review/list/*"
+      ],
+      "run_at":"document_end",
+      "js": [
+        "laconic/laconic.js",
+        "goodreads.js",
+        "review_list.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.goodreads.com/book/show/*"
+      ],
+      "run_at":"document_end",
+      "js": [
+        "laconic/laconic.js",
+        "goodreads.js",
+        "book_show.js"
+      ]
+    }
   ],
-  "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
-  },
   "manifest_version": 2
 }
